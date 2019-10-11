@@ -36,14 +36,14 @@ class ViewController: UIViewController {
         }
         
         // Failure tests
-        let getNotExisting: Result<Bool, Error> = box.give(key: "my string")
-        switch getNotExisting  {
+        let errorNotFound: Result<Bool, Error> = box.give(key: "my string")
+        switch errorNotFound {
         case .success(let congrats): print("Succsess:\n\(congrats)")
         case .failure( _): break
         }
         
-        let getWrongType: Result<Int, Error> = box.give(key: "my double")
-        switch getWrongType  {
+        let errorAnoterType: Result<Int, Error> = box.give(key: "my double")
+        switch errorAnoterType  {
         case .success(let congrats): print("Succsess: \(congrats)")
         case .failure( _): break
         }
