@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         let errorAnoterType: Result<Int, Error> = box.give(key: "my double")
         switch errorAnoterType  {
-        case .success(let congrats): print("Succsess: \(congrats)")
+        case .success(let congrats): print("Succsess:\n\(congrats)")
         case .failure( _): break
         }
     
